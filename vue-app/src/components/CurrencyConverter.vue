@@ -2,7 +2,6 @@
 import { ref, onMounted, watch } from "vue";
 import axios from "axios";
 import "./CurrencyConverter.css";
-import CustomDropdown from "./CustomDropdown.vue";
 
 const apiKey = "1SMxQumaAcC996SUXGsnlBPW44t2RR82";
 const currencies = ref([]);
