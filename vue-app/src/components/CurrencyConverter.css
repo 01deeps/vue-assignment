@@ -1,0 +1,126 @@
+.converter-ui {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(29, 28, 28, 0.133);
+  max-width: 100%;   /* Full width of screen */
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.converter-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.input-combo {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgb(152, 148, 148);
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 1;           /* Input+select together take available width */
+  min-width: 220px;
+}
+
+.combo-input {
+  flex: 1;           /* Take all remaining space */
+  padding: 0.6rem 1rem;
+  border: none;
+  background: white;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.combo-input:focus {
+  outline: none;
+}
+
+.combo-select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.4rem 0.8rem;
+  background: white;
+  color: black;
+  border-left: 2px solid black;
+  min-width: 120px;      /* keep it small on the right */
+  flex: 0 0 auto;        /* do not grow */
+}
+
+.combo-select select {
+  background: white;
+  color: black;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;          /* fill small select container */
+  padding: 0.5rem 0.8rem;
+}
+
+.combo-select select:focus {
+  outline: none;
+}
+
+.flag {
+  width: 24px;
+  height: 18px;
+  border-radius: 3px;
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.icon {
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: black;
+  user-select: none;
+}
+
+/* Vertical stack of horizontal arrows */
+.swap-horizontal-vertical {
+  display: flex;
+  flex-direction: column; /* stack arrows */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 2px; /* very close together */
+}
+
+/* Arrows style */
+.swap-horizontal-vertical .arrow {
+  font-size: 1.6rem; /* adjust size */
+  color: black;
+  background: none;
+  border: none;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.swap-horizontal-vertical .arrow:hover {
+  color: #555; /* optional hover effect */
+}
+
+/* Small screens: keep centered */
+@media (max-width: 600px) {
+  .converter-row {
+    flex-direction: column;
+  }
+  .swap-horizontal-vertical {
+    margin: 0.5rem 0;
+  }
+}
+
+.error {
+  margin-top: 1rem;
+  color: #cb1111;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
